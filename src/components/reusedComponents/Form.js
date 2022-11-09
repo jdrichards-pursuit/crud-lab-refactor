@@ -42,6 +42,18 @@ function Form({ edit }) {
     }
   }, [id]);
 
+  const {
+    type,
+    title,
+    country,
+    dateAdded,
+    description,
+    duration,
+    listedIn,
+    rating,
+    releaseYear
+  } = input;
+
   return (
     <>
       {error ? (
@@ -65,7 +77,7 @@ function Form({ edit }) {
           <input
             type="text"
             id="title"
-            value={input.title}
+            value={title}
             onChange={(event) => {
               handleFormInput(event, input, setInput);
             }}
@@ -75,7 +87,7 @@ function Form({ edit }) {
           <input
             type="text"
             id="description"
-            value={input.description}
+            value={description}
             onChange={(event) => {
               handleFormInput(event, input, setInput);
             }}
@@ -85,7 +97,7 @@ function Form({ edit }) {
           <input
             type="text"
             id="type"
-            value={input.type}
+            value={type}
             onChange={(event) => {
               handleFormInput(event, input, setInput);
             }}
@@ -95,7 +107,7 @@ function Form({ edit }) {
           <input
             type="text"
             id="rating"
-            value={input.rating}
+            value={rating}
             onChange={(event) => {
               handleFormInput(event, input, setInput);
             }}
@@ -105,7 +117,7 @@ function Form({ edit }) {
           <input
             type="text"
             id="listedIn"
-            value={input.listedIn}
+            value={listedIn}
             onChange={(event) => {
               handleFormInput(event, input, setInput);
             }}
@@ -115,7 +127,7 @@ function Form({ edit }) {
           <input
             type="text"
             id="duration"
-            value={input.duration}
+            value={duration}
             onChange={(event) => {
               handleFormInput(event, input, setInput);
             }}
@@ -125,7 +137,7 @@ function Form({ edit }) {
           <input
             type="text"
             id="releaseYear"
-            value={input.releaseYear}
+            value={releaseYear}
             onChange={(event) => {
               handleFormInput(event, input, setInput);
             }}
@@ -135,7 +147,7 @@ function Form({ edit }) {
           <input
             type="text"
             id="country"
-            value={input.country}
+            value={country}
             onChange={(event) => {
               handleFormInput(event, input, setInput);
             }}
@@ -145,7 +157,7 @@ function Form({ edit }) {
           <input
             type="text"
             id="dateAdded"
-            value={input.dateAdded}
+            value={dateAdded}
             onChange={(event) => {
               handleFormInput(event, input, setInput);
             }}
