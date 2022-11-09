@@ -1,10 +1,18 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import "./index.css";
-import EstRouter from "./components/EstRouter";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { BrowserRouter as Router } from 'react-router-dom';
+import './index.css';
 
+function Main(props) {
+  // Wrap the entire App in Router component allows for components to return Route components
+  return (
+    <Router>
+      <React.StrictMode>
+        <App />
+      </React.StrictMode>
+    </Router>
+  );
+}
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
-  <EstRouter />
-);
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<Main />);
