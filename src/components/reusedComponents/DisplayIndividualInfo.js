@@ -36,9 +36,11 @@ function DisplayIndividualInfo() {
       .catch((err) => setError(true));
   }, [id]);
 
+  const { title, duration, listedIn, country, rating, dateAdded, description } =
+    data;
   return (
     <section className="shows-show-wrapper">
-      <h2>{data.title}</h2>
+      <h2>{title}</h2>
       <section className="shows-show">
         {error ? (
           <ErrorMessage />
@@ -46,23 +48,23 @@ function DisplayIndividualInfo() {
           <>
             <aside>
               <p>
-                <span>Duration:</span> {data.duration}
+                <span>Duration:</span> {duration}
               </p>
               <p>
-                <span>Listed Categories:</span> {data.listedIn}
+                <span>Listed Categories:</span> {listedIn}
               </p>
               <p>
-                <span>Country:</span> {data.country}
+                <span>Country:</span> {country}
               </p>
               <p>
-                <span>Rating:</span> {data.rating}
+                <span>Rating:</span> {rating}
               </p>
               <p>
-                <span>Date Added:</span> {data.dateAdded}
+                <span>Date Added:</span> {dateAdded}
               </p>
             </aside>
             <article>
-              <p>{data.description}</p>
+              <p>{description}</p>
             </article>
             <aside>
               <button
